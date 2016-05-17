@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Web Dev Tools</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300|Cutive+Mono' rel='stylesheet' type='text/css'>
+
+	<script src="https://cdn.rawgit.com/amark/gun/882e4b740a8a87349a76e4a7d0625cb1b74b1c0e/gun.js" ></script>
+	<script src="scripts.js" async=""></script>
+</head>
+<body>
+
+	<h1>Web Dev Tools</h1>
+
+	<div id="intro">
+		<p>Sean is demoing with:
+			<ul>
+				<li><a href="https://developer.mozilla.org/en-US/Firefox/Developer_Edition">Firefox Developer Edition - 48.0a2 (2016-05-16)</a></li>
+				<li>Chrome - Version 50.0.2661.102</li>
+			</ul>
+		</p>
+	</div>
+
+	<div id="accessing">
+		<h2>Accessing</h2>
+		<p>We'll start by accessing your last toolview or the inspector</p>
+		<ul>
+			<li>OS X: <span class="keys">Cmd + Opt + I</span></li>
+			<li>Firefox:
+				<ul>
+					<li>Right-click on any page element and select <strong>Inspect Element</strong>.</li>
+					<li>From the Firefox menubar: Tools > Web Developer > Inspector</li>
+					<li>Windows and Linux: <span class="keys">Ctrl + Shift + I</span></li>
+					<li>Additional Firefox shortcuts <a href="https://developer.mozilla.org/en-US/docs/Tools/Keyboard_shortcuts">https://developer.mozilla.org/en-US/docs/Tools/Keyboard_shortcuts</a>
+				</ul>
+			<li>Chrome: 
+				<ul>
+					<li>Right-click on any page element and select <strong>Inspect</strong>.</li>
+					<li>Open the Chrome menu (hamburger icon) at the top-right of your browser window, then select Tools > Developer Tools.</li>
+					<li>Windows: <span class="keys">F12, Ctrl + Shift + I</span></li>
+					<li>Additional Chrome shortcuts <a href="https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts</a>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="options_navigation">
+		<h2>Options & Navigating</h2>
+		<ul>
+			<li>Dock Placements</li>
+			<li>Toolbox Options (Firefox) / Settings (and Chrome's <code>chrome://flags</code>)</li>
+			<li>Responsive Device Mode (Firefox) / Toggle Device Mode (Chrome)</li>
+			<li><span class="keys">cmd + ]</span> and <span class="keys">cmd + [</span>
+		</ul>
+	</div>
+
+	<div id="html_css">
+		<h2>HTML & CSS</h2>
+		<ul>
+			<li>select elements toolbar button</li>
+			<li><strong>Inspector</strong> (Firefox) / <strong>Elements</strong> (Chrome)</li>
+			<li>HTML</li>
+			<li id="style-demo" style="font-weight: normal; color: #000">CSS
+				<ul>
+					<li>Rules (Firefox) / Styles (Chrome) - the css code</li>
+					<li>Computed - the css result</li>
+					<li>
+						<span style="border: inherit; padding: inherit; margin: inherit; display: inherit"><!-- border: thin #999 solid; padding: 2em; margin: 5px; display: block;
+						          -->
+							Box Model (under Computed in Chrome)
+						</span>
+					</li>
+					<li><strong>Styles</strong> (Firefox-only)
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="js">
+		<h2>JavaScript</h2>
+		<div>Some examples to play with:<br />
+			Button: <button id="listener" onmouseover="console.log('Wonderful roll-over!')">Hover over and click me!!!</button><br />
+			Color Pickers:
+			<input id='color-picker-1' type='color'></input>
+			<input id='color-picker-2' type='color'></input>
+		<ul>
+			<li><strong>Console</strong>
+				<ul>
+					<li>messages stack</li>
+					<li>Split-console shortcut key - <span class="keys">esc</span></li>
+				</ul>
+			</li>
+			<li><strong>Scratchpad</strong> then <span class="keys">cmd-r</span> (Firefox) / <br /> Sources > Snippets then <span class="keys">cmd-enter</span>(Chrome) </li>
+			<li><strong>Debugger</strong> (Firefox) / <strong>Sources</strong> (Chrome):<br />
+				<ul>
+					<li>in line - <code>debugger</code></li>
+					<li>in Web Dev Tools - breakpoints</li>
+					<li>in Web Dev Tools - conditional breakpoints
+				</ul>
+			</li>
+			<li><em>Element awesomeness!</em>
+				<ul>
+					<li><code>inspect($0)</code></li>
+					<li><code>$0</code></li>
+					<li><code>copy(<em>obj</em>)</code></li>
+					<li>"and many more" via <code>help</code> (Firefox-only)</li>
+				</ul>
+			</li>
+			<li><em>Event awesomeness!</em>
+				<br/><strong>Debugger</strong> > Events (Firefox) / 
+				<br/><strong>Sources</strong> > Event Listener Breakpoints (Chrome)
+			</li>
+		</ul>
+	</div>
+
+	<div id='extras'>
+		<h2>Network, Performance, Memory, & Storage/Resources, oh my!</h2>
+
+		<h2>Learn more</h2>
+			<ul>
+				<li>Firefox: <a href="https://www.mozilla.org/en-US/firefox/developer/">https://www.mozilla.org/en-US/firefox/developer/</a></li>
+				<li>Chrome: <a href="https://developers.google.com/web/tools/chrome-devtools/?hl=en">https://developers.google.com/web/tools/chrome-devtools/?hl=en</a></li>
+			</ul>
+		</li>
+
+		<h2>Bonus Bullets</h2>
+		<ul>
+			<li><a href="https://duckduckgo.com/">DuckDuckGo</a> <a href="https://duckduckgo.com/bang?c=Tech">!bangs</a>
+				<ul>
+					<li><strong>!mdn</strong>: Mozilla Developer Network (MDN)</li>
+					<li><strong>!js</strong>: MDN JavaScript specific</li>
+				</ul>
+			</li>
+			<li>Adding <code>async=""</code> to a script tag will make it load asynchronously (e.g. line 12 of this file).</li>
+		</ul>
+	</div>
+
+</body>
+</html>
