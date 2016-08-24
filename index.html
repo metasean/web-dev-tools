@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Web Dev Tools for Java Developers</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300|Cutive+Mono' rel='stylesheet' type='text/css'>
+
+	<script src="scripts.js" async=""></script>
+</head>
+<body>
+
+<div>
+
+	<div id="intro">
+		<h1>Web Dev Tools</h1>
+
+		<div style="border: thin solid black; padding: 0.75em; background-color: #ccc;">
+			<p>To follow along with this example navigate to:<br />
+				<div style="font-weight: 900; font-size: 125%; letter-spacing: 0.1em;"><span><a href="https://metasean.github.io/web-dev-tools/index.html">metasean.github.io / </span><span>web-dev-tools / </span><span>index.html</span></a></div></p>
+			<p><strong><em>or</em></strong> git / zip:<br />
+				<a href="https://github.com/metasean/web-dev-tools"><div style="font-weight: 900; font-size: 125%; letter-spacing: 0.1em;"><span>github.com / </span><span>metasean / </span><span>web-dev-tools</span></a></div>
+
+			<p>The demo will be done with the following browsers.  Ensure you have at least one of them.  Both would be better. ;-)
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/Firefox/Developer_Edition" target="_blank">Firefox Developer Edition - 50.0a2 (2016-08-23)</a></li>
+					<li><a href="https://www.google.com/chrome/" target="_blank">Chrome - Version 54.0.2838.0</a></li>
+				</ul>
+			</p>
+		</div>
+	</div>
+
+	<div id="accessing">
+		<h2>Accessing</h2>
+		<p>We'll start by accessing your last toolview or the inspector</p>
+		<ul>
+			<li>OS X: <span class="keys">Cmd + Opt + I</span></li>
+			<li>Firefox:
+				<ul>
+					<li>Right-click on any page element and select <strong>Inspect Element</strong>.</li>
+					<li>From the Firefox menubar: Tools > Web Developer > Inspector</li>
+					<li>Windows and Linux: <span class="keys">Ctrl + Shift + I</span></li>
+					<li>Additional Firefox shortcuts <a href="https://developer.mozilla.org/en-US/docs/Tools/Keyboard_shortcuts">https://developer.mozilla.org/en-US/docs/Tools/Keyboard_shortcuts</a>
+				</ul>
+			<li>Chrome: 
+				<ul>
+					<li>Right-click on any page element and select <strong>Inspect</strong>.</li>
+					<li>Open the Chrome menu (hamburger icon) at the top-right of your browser window, then select Tools > Developer Tools.</li>
+					<li>Windows: <span class="keys">F12, Ctrl + Shift + I</span></li>
+					<li>Additional Chrome shortcuts <a href="https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts</a>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="options_navigation">
+		<h2>Options & Navigating</h2>
+		<ul>
+			<li>Dock Placements</li>
+			<li>Toolbox Options (Firefox) / Settings (and Chrome's <code>chrome://flags</code>)
+			<ul>
+				<li>Select Scratchpad under "Available Toolbox Buttons", <i>NOT</i> the Scratchpad under "Default Firefox Developer Tools</li>
+			</ul>
+			</li>
+			<li>Responsive Device Mode (Firefox) / Toggle Device Mode (Chrome)</li>
+			<li><span class="keys">cmd + ]</span> and <span class="keys">cmd + [</span>
+		</ul>
+	</div>
+
+	<div id="html_css">
+		<h2>HTML & CSS</h2>
+		<ul>
+			<li>select elements toolbar button</li>
+			<li><strong>Inspector</strong> (Firefox) / <strong>Elements</strong> (Chrome)</li>
+			<li>HTML</li>
+			<li id="style-demo" style="font-weight: normal; color: #000">CSS
+				<ul>
+					<li>Rules (Firefox) / Styles (Chrome) - the css code</li>
+					<li>Computed - the css result</li>
+					<li>
+						<span style="border: inherit; padding: inherit; margin: inherit; display: inherit"><!-- border: thin #999 solid; padding: 2em; margin: 5px; display: block;
+						          -->
+							Box Model (under Computed in Chrome)
+						</span>
+					</li>
+					<li><strong>Styles</strong> (Firefox-only)
+				</ul>
+			</li>
+			<li>NOTE: Saving files from Chrome:
+				<ol>
+					<li>While on Sources/Sources tab</li>
+					<li>Right-click on the local folder</li>
+					<li>Select to "Add Folder to Workspace"</li>
+					<li>When DevTools requests permission to that directory - click Allow</li>
+				</ol>
+			</li>
+		</ul>
+	</div>
+
+	<div id="js">
+		<h2>JavaScript</h2>
+		<div>Some examples to play with:<br />
+			Button: <button id="listener" onmouseover="console.log('Wonderful roll-over!')">Hover over and click me!!!</button><br />
+			Color Pickers:
+			<input id='color-picker-1' type='color'></input>
+			<input id='color-picker-2' type='color'></input>
+		<ul>
+			<li><strong>Console</strong>
+				<ul>
+					<li>messages stack</li>
+					<li>Split-console shortcut key - <span class="keys">esc</span></li>
+				</ul>
+			</li>
+			<li><strong>Scratchpad</strong> then <span class="keys">cmd-r</span> (Firefox) / <br /> Sources > Snippets then <span class="keys">cmd-enter</span>(Chrome) </li>
+			<li><strong>Debugger</strong> (Firefox) / <strong>Sources</strong> (Chrome):<br />
+				<ul>
+					<li>in line - <code>debugger</code></li>
+					<li>in Web Dev Tools - breakpoints</li>
+					<li>in Web Dev Tools - conditional breakpoints
+				</ul>
+			</li>
+			<li><em>Element awesomeness!</em>
+				<ul>
+					<li><code>$0</code></li>
+					<li><code>inspect($0)</code> (Firefox-only)</li>
+					<li>"and many more" via <code>help</code> (Firefox-only)</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id='extras'>
+
+		<h2>There's a lot more!</h2>
+			<ul>
+				<li>Network, Performance, Memory, & Storage/Resources, ...</li>
+			</ul>
+		<h2>To learn more about web tools in...</h2>
+			<ul>
+				<li>Firefox: <a href="https://www.mozilla.org/en-US/firefox/developer/">https://www.mozilla.org/en-US/firefox/developer/</a></li>
+				<li>Chrome: <a href="https://developers.google.com/web/tools/chrome-devtools/?hl=en">https://developers.google.com/web/tools/chrome-devtools/?hl=en</a></li>
+			</ul>
+		</li>
+
+		<h2>Bonus</h2>
+		<ul>
+			<li><a href="https://duckduckgo.com/">DuckDuckGo</a> <a href="https://duckduckgo.com/bang?c=Tech">!bangs</a>
+				<ul>
+					<li><strong>!mdn</strong>: Mozilla Developer Network (MDN)</li>
+					<li><strong>!js</strong>: MDN JavaScript specific</li>
+				</ul>
+			</li>
+		</ul>
+
+	</div>
+<div>	
+
+</body>
+</html>
